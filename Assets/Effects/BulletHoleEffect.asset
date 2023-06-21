@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9437dfa59d0164c89d59c14938f889, type: 3}
+  m_Name: BulletHoleEffect
+  m_EditorClassIdentifier: 
+  m_SpawnedObjects: []
+  m_Decals:
+  - {fileID: 1805676039915944, guid: 8405758d4c254154f96db411bdac8e6e, type: 3}
+  - {fileID: 1805676039915944, guid: 28be229493041a544ac7c9550e872155, type: 3}
+  - {fileID: 1805676039915944, guid: d0fbc9d5595462b409818317a3bf822a, type: 3}
+  - {fileID: 1805676039915944, guid: 9cea9b08ada42174783a5ec61deebd55, type: 3}
+  m_MinDecalScale: 1
+  m_MaxDecalScale: 1
+  m_AllowedDecalEdgeOverlap: 0.25
+  m_AudioConfig: {fileID: 0}
+  m_AudioClips: []
+  m_MinAudioVolume: 1
+  m_MaxAudioVolume: 1
+  m_MinAudioPitch: 1
+  m_MaxAudioPitch: 1
+  m_OneClipPerFrame: 0
+  m_RandomClipSelection: 1
+  m_StateName: 
+  m_StateDisableTimer: 10
