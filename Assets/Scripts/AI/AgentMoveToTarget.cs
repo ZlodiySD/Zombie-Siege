@@ -36,15 +36,24 @@ namespace Didenko.AI
       if (_isDead || _targetIsDead)
         return;
       
-      _navMeshAgentMovement.SetDestination(_moveTarget.position);
+      Move(_moveTarget.position);
     }
 
     private void RegisterEvents()
     {
       EventHandler.RegisterEvent<Vector3, Vector3, GameObject>(gameObject, "OnDeath", OnDeath);
-      EventHandler.RegisterEvent<Vector3, Vector3, GameObject>(_target, "OnDeath", (a1, a2, a3) => _targetIsDead = true);
+      EventHandler.RegisterEvent<Vector3, Vector3, GameObject>(_target, "OnDeath", (a1, a2, a3) => OnTargetDied());
       EventHandler.RegisterEvent(gameObject, "OnRespawn", OnRespawn);
     }
+
+    private void OnTargetDied()
+    {
+      _targetIsDead = true;
+      Move(_selfTransform.position);
+    }
+
+    private void Move(Vector3 to) => 
+      _navMeshAgentMovement.SetDestination(to);
 
     private void OnRespawn()
     {
